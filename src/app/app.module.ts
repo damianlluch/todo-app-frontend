@@ -7,10 +7,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppComponent } from './app.component';
+import { HomeComponent } from '../app/home/home.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatListModule} from "@angular/material/list";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatIconModule} from "@angular/material/icon";
+import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +28,12 @@ import { AppComponent } from './app.component';
     FormsModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCardModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatIconModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,11 +24,6 @@ export class TasksService {
     return this.http.get<Task[]>(`${this.baseUrl}/tasks`, { headers });
   }
 
-  getTaskById(id: number): Observable<Task> {
-    const headers = this.getAuthorizationHeaders();
-    return this.http.get<Task>(`${this.baseUrl}/tasks/${id}`, { headers });
-  }
-
   createTask(task: Task): Observable<Task> {
     const headers = this.getAuthorizationHeaders();
     return this.http.post<Task>(`${this.baseUrl}/tasks`, task, { headers });
