@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {Task} from "../task";
+import {Task} from "../home/task";
 import {Router} from "@angular/router";
-import {TasksService} from "../tasks.service";
-import {AuthService} from "../services/auth.service";
+import {TasksService} from "../home/tasks.service";
+import {AuthService} from "./auth.service";
 
 @Component({
   selector: 'app-login',

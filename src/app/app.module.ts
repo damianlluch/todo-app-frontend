@@ -15,7 +15,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from './auth.interceptor';
+import { AuthInterceptor } from './login/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
