@@ -1,17 +1,17 @@
 <div class="task-container">
-  <mat-card>
+  <mat-card class="card">
     <mat-card-header>
       <mat-card-title>My Tasks</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <div *ngIf="!editingTaskId">
+      <div *ngIf="!editingTaskId" class="task-input">
         <mat-form-field class="full-width">
           <input matInput [(ngModel)]="newTask.title" placeholder="New Task" />
         </mat-form-field>
         <button mat-raised-button color="primary" (click)="createTask()">Add Task</button>
       </div>
 
-      <div *ngIf="editingTaskId && editingTask">
+      <div *ngIf="editingTaskId && editingTask" class="task-input">
         <mat-form-field class="full-width">
           <input matInput [(ngModel)]="editingTask.title" placeholder="Edit Task" />
         </mat-form-field>
@@ -19,17 +19,21 @@
         <button mat-raised-button color="warn" (click)="cancelEdit()">Cancel</button>
       </div>
 
-      <mat-list>
+      <mat-list class="task-list">
         <mat-list-item *ngFor="let task of tasks">
-          <mat-checkbox [(ngModel)]="task.completed" (change)="editTask(task)">
-            {{task.title}}
-          </mat-checkbox>
-          <button mat-icon-button color="warn" (click)="deleteTask(task.id ?? -1)">
-            <mat-icon>delete</mat-icon>
-          </button>
-          <button mat-icon-button color="primary" (click)="editTask(task)">
-            <mat-icon>edit</mat-icon>
-          </button>
+          <div class="task-list-item">
+            <mat-checkbox [(ngModel)]="task.completed" (change)="editTask(task)">
+              {{task.title}}
+            </mat-checkbox>
+            <div class="task-buttons">
+              <button class="task-button" mat-icon-button color="warn" (click)="deleteTask(task.id ?? -1)">
+                Delete
+              </button>
+              <button class="task-button" mat-icon-button color="primary" (click)="editTask(task)">
+                Edit
+              </button>
+            </div>
+          </div>
         </mat-list-item>
       </mat-list>
     </mat-card-content>

@@ -1,0 +1,53 @@
+.task-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 80%;
+  max-width: 800px;
+}
+
+.task-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+.task-input button.mat-raised-button {
+  padding: 0.5em 1em;
+  flex-shrink: 0;
+}
+
+.task-list .task-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 120px; /* incrementa el espacio para los botones */
+}
+
+.task-button {
+  flex-shrink: 0;
+  flex-basis: 50px; /* usa flex-basis en lugar de width */
+  height: 50px; /* incrementa el alto de los botones */
+  padding: 10px !important; /* incrementa el padding */
+  box-sizing: border-box;
+  margin-right: 10px; /* agrega margen a los botones */
+  display: flex;
+  align-items: center; /* asegura que los iconos están centrados */
+  justify-content: center;
+}
+
+.task-button mat-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+}
